@@ -1,0 +1,22 @@
+/node_modules/
+
+.yarn-integrity
+
+# Environment files
+.env
+.env.local
+
+# Build directories
+/.next/
+/dist/
+/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
