@@ -1,6 +1,6 @@
 # Example Web Client
 
-This project demonstrates how to use `@lightprotocol/stateless.js` to interact with the ZK Compression API via a browser.
+This project demonstrates how to use `@lightprotocol/stateless.js` in a browser environment to interact with the ZK Compression API.
 
 ## Running the Example
 
