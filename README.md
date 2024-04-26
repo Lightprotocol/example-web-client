@@ -1,6 +1,6 @@
 # Example Web Client
-https://github.com/Lightprotocol/example-web-client/blob/main/README.md
-This project demonstrates how to use `@lightprotocol/stateless.js` to interact with the ZK Compression API on Solana.
+
+This project demonstrates how to use `@lightprotocol/stateless.js` to interact with the ZK Compression API via a browser.
 
 ## Running the Example
 
@@ -15,11 +15,11 @@ The Monorepo lives at: https://github.com/Lightprotocol/light-protocol
 git clone git@github.com:Lightprotocol/light-protocol.git
 ```
 
-1. Build the Monorepo against the v.0.1.1 tag.
+1. Build the Monorepo against the js-v.0.2.2 tag.
 
 ```bash
 git fetch --tags &&
-git checkout tags/v.0.1.1 &&
+git checkout tags/js-v.0.2.2 &&
 . ./scripts/devenv.sh &&
 ./scripts/install.sh &&
 ./scripts/build.sh
@@ -44,6 +44,5 @@ npm run dev
 If a prompt appears asking you to select a `@lightprotocol/hasher.rs` version, select `0.1.1-alpha.1`.
 
 The app will serve and mount the app at http://localhost:1234 and run the code defined in `page.tsx`.
-
 
 The UI will show a `react-hydration-error` which you can safely ignore.

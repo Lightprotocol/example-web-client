@@ -4,8 +4,8 @@ import {
   bn,
   buildTx,
   confirmTx,
+  createRpc,
   defaultTestStateTreeAccounts,
-  getTestRpc,
   selectMinCompressedSolAccountsForTransfer,
 } from "@lightprotocol/stateless.js";
 import {
@@ -62,7 +62,7 @@ const SendButton: FC = () => {
 
   const onClick = useCallback(async () => {
     /// Get Connection with compatibility to Compression API
-    const connection = await getTestRpc();
+    const connection = createRpc();
 
     if (!publicKey) throw new WalletNotConnectedError();
 
