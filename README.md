@@ -4,7 +4,7 @@ This project demonstrates how to use `@lightprotocol/stateless.js` in a browser 
 
 ## Running the Example
 
-**You need to have the CLI installed to run this example. For installation instructions, see [here](https://github.com/Lightprotocol/light-protocol/tree/js-0.2.1-release/cli#readme).**
+**You need to have the CLI installed to run this example. For installation instructions, see [here](https://github.com/Lightprotocol/light-protocol/tree/main/cli#readme).**
 
 1. Start a light test-validator using the CLI
 
@@ -19,8 +19,6 @@ light test-validator
 npm install &&
 npm run dev
 ```
-
-If a prompt appears asking you to select a `@lightprotocol/hasher.rs` version, select `0.1.1-alpha.1`.
 
 The app will serve and mount the app at http://localhost:1234 and run the code defined in `page.tsx`.
 
