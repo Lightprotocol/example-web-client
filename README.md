@@ -15,9 +15,14 @@ light test-validator
 2. Start the app
 
 ```bash
-# or yarn or pnpm
-npm install &&
-npm run dev
+# NPM
+npm install && npm run dev
+
+# Yarn
+yarn && yarn dev
+
+# PNPM
+pnpm install && pnpm run dev
 ```
 
 The app will serve and mount the app at http://localhost:1234 and run the code defined in `page.tsx`.

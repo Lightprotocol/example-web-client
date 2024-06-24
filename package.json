@@ -10,8 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@coral-xyz/anchor": "^0.30.0",
-    "@lightprotocol/stateless.js": "0.3.0",
+    "@coral-xyz/anchor": "^0.29.0",
+    "@lightprotocol/stateless.js": "0.4.0",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",

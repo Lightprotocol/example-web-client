@@ -32,6 +32,8 @@ import {
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 export default function Home() {
+  /// Testnet:
+  // const endpoint = useMemo(() => "http://zk-testnet.helius.dev:8899", []);
   const endpoint = useMemo(() => "http://127.0.0.1:8899", []);
   const wallets = useMemo(() => [new UnsafeBurnerWalletAdapter()], []);
 
@@ -62,6 +64,12 @@ const SendButton: FC = () => {
 
   const onClick = useCallback(async () => {
     /// Get Connection with compatibility to Compression API
+    /// Testnet:
+    // const connection = createRpc(
+    //   "https://zk-testnet.helius.dev:8899", // rpc
+    //   "https://zk-testnet.helius.dev:8784", // zk compression rpc
+    //   "https://zk-testnet.helius.dev:3001" // prover
+    // );
     const connection = createRpc();
 
     if (!publicKey) throw new WalletNotConnectedError();
