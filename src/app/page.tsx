@@ -1,6 +1,7 @@
 "use client";
 import {
   LightSystemProgram,
+  Rpc,
   bn,
   buildTx,
   confirmTx,
@@ -64,13 +65,7 @@ const SendButton: FC = () => {
 
   const onClick = useCallback(async () => {
     /// Get Connection with compatibility to Compression API
-    /// Testnet:
-    // const connection = createRpc(
-    //   "https://zk-testnet.helius.dev:8899", // rpc
-    //   "https://zk-testnet.helius.dev:8784", // zk compression rpc
-    //   "https://zk-testnet.helius.dev:3001" // prover
-    // );
-    const connection = createRpc();
+    const connection: Rpc = createRpc();
 
     if (!publicKey) throw new WalletNotConnectedError();
 
@@ -120,9 +115,9 @@ const SendButton: FC = () => {
     /// 1. We need to fetch our sol balance
     const accounts = await connection.getCompressedAccountsByOwner(publicKey);
 
-    console.log("accounts", accounts);
+    console.log("accounts", accounts.items);
     const [selectedAccounts, _] = selectMinCompressedSolAccountsForTransfer(
-      accounts,
+      accounts.items,
       1e7
     );
 
