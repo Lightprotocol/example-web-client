@@ -6,8 +6,8 @@ import {
   buildTx,
   confirmTx,
   createRpc,
-  defaultTestStateTreeAccounts,
   selectMinCompressedSolAccountsForTransfer,
+  selectStateTreeInfo,
 } from "@lightprotocol/stateless.js";
 import {
   ComputeBudgetProgram,
@@ -76,11 +76,14 @@ const SendButton: FC = () => {
     );
 
     /// compress to self
+    const stateTreeInfos = await connection.getStateTreeInfos();
+    const treeInfo = selectStateTreeInfo(stateTreeInfos);
+
     const compressInstruction = await LightSystemProgram.compress({
       payer: publicKey,
       toAddress: publicKey,
       lamports: 1e8,
-      outputStateTree: defaultTestStateTreeAccounts().merkleTree,
+      outputStateTreeInfo: treeInfo,
     });
 
     const compressInstructions = [
@@ -133,7 +136,6 @@ const SendButton: FC = () => {
       toAddress: recipient,
       lamports: 1e7,
       inputCompressedAccounts: selectedAccounts,
-      outputStateTrees: [defaultTestStateTreeAccounts().merkleTree],
       recentValidityProof: compressedProof,
       recentInputStateRootIndices: rootIndices,
     });
